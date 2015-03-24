@@ -5,8 +5,8 @@
 function showResults(score) {
 	"use strict";
 
-	var $output = $("<h2>").html("Results:") + 
-	$("<p>").html("Your choice: " + score.player + 
+	var $output = $("<p>").html("Results:" + 
+		"<br>Your choice: " + score.player + 
 		"<br>Opponent's choice: " + score.server + 
 		"<br><br>Outcome: " + score.outcome + 
 		"<br><br>Wins: " + score.wins + 

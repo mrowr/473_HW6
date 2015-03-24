@@ -8,15 +8,15 @@ var http = require("http"),
     express = require("express"),
     app = express(),
     serverResponse,
-    score = {
-        player: "",
-        server: "",
-        outcome: null,
-        wins: 0,
-        losses: 0,
-        ties: 0
-    },
+    score = {},
     moves = ["rock", "paper", "scissors", "spock", "lizard"];
+
+score.player = "";
+score.server = "";
+score.outcome = null;
+score.wins = 0;
+score.losses = 0;
+score.ties = 0;
 
 // configure the app to use the client directory for static files
 app.use(express.static(__dirname + "/client"));
@@ -29,7 +29,7 @@ function randomIntInc (low, high) {
 function lose() { score.losses++; score.outcome = "lose"; }
 function win() { score.wins++; score.outcome = "win"; }
 
-function gameLogic(res, playerChoice) {
+function gameLogic(playerChoice) {
     serverResponse = moves[randomIntInc(0,4)];
 
     score.player = playerChoice;
