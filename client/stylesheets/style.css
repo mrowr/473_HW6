@@ -1,5 +1,4 @@
-header, main, footer {
-	min-width: 855px;
+body {
 	text-align: center;
-	margin: auto;
+	margin: auto;	
 }
